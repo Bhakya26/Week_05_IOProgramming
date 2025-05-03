@@ -1,0 +1,21 @@
+package org.example;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+public class StudentJson {
+    public static void main(String[] args) {
+        JSONObject student = new JSONObject();
+        student.put("name", "John Doe");
+        student.put("age", 20);
+
+        JSONArray subjects = new JSONArray();
+        subjects.put("Math");
+        subjects.put("Physics");
+        subjects.put("Computer Science");
+
+        student.put("subjects", subjects);
+
+        System.out.println(student.toString(2)); // pretty print with indentation
+    }
+}
